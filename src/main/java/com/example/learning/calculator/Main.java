@@ -40,7 +40,7 @@ public class Main {
 
     private static void printInfo(){
         System.out.println("**********************************************");
-        System.out.println("Choose opertaion 1(+), 2(-), other numebr to exit");
+        System.out.println("Choose opertaion 1(+), 2(-), 3(*), 4(/), 5(%), other numebr to exit");
         System.out.println("Enter: ");
     }
 
@@ -54,6 +54,12 @@ public class Main {
         int [] twoNumbersFromInput =getTwoNumbersFromInput(scanner);
         int result = calculator.subtraction(twoNumbersFromInput[0], twoNumbersFromInput[1]);
         System.out.println(twoNumbersFromInput[0] + " - " + twoNumbersFromInput[1] + " = " + result);
+    }
+
+    private static void moduloOperation(Scanner scanner, Calculator calculator){
+        int [] twoNumbersFromInput =getTwoNumbersFromInput(scanner);
+        int result = calculator.modulo(twoNumbersFromInput[0], twoNumbersFromInput[1]);
+        System.out.println(twoNumbersFromInput[0] + twoNumbersFromInput[1] + " % " + result);
     }
 
     private static void multiplicationOperation(Scanner scanner, Calculator calculator){
@@ -80,6 +86,10 @@ public class Main {
 
     private static void printResult(int firstNumber, int secondNumber, String operator, int result){
         System.out.println(firstNumber+" " + operator+ " " +secondNumber+ " = " + result);
+    }
+
+    public static void printResult(int firstNumber, int secondNumber, String operator, int result){
+        System.out.println(firstNumber+" " + operator+ " "+ secondNumber + " = " + result);
     }
 
     private static int[] getTwoNumbersFromInput(Scanner scanner){
