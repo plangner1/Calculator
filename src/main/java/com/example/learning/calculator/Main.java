@@ -78,19 +78,7 @@ public class Main {
         }
     }
 
-    private static void moduloOperation(Scanner scanner, Calculator calculator){
-        int [] twoNumbersFromInput =getTwoNumbersFromInput(scanner);
-        int result = calculator.modulo(twoNumbersFromInput[0], twoNumbersFromInput[1]);
-        System.out.println(twoNumbersFromInput[0] + twoNumbersFromInput[1] + " % " + result);
-    }
 
-    private static void printResult(int firstNumber, int secondNumber, String operator, int result){
-        System.out.println(firstNumber+" " + operator+ " " +secondNumber+ " = " + result);
-    }
-
-    public static void printResult(int firstNumber, int secondNumber, String operator, int result){
-        System.out.println(firstNumber+" " + operator+ " "+ secondNumber + " = " + result);
-    }
 
     private static int[] getTwoNumbersFromInput(Scanner scanner){
         System.out.println("Enter first number: ");
