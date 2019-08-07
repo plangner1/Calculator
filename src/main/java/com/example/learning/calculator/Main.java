@@ -62,10 +62,14 @@ public class Main {
         System.out.println(twoNumbersFromInput[0] + " * " + twoNumbersFromInput[1] + " = " + result);
     }
 
-    private static void divisionOperation(Scanner scanner, Calculator calculator){
-        int [] twoNumbersFromInput =getTwoNumbersFromInput(scanner);
-        int result = calculator.division(twoNumbersFromInput[0], twoNumbersFromInput[1]);
-        System.out.println(twoNumbersFromInput[0] + " / " + twoNumbersFromInput[1] + " = " + result);
+    private static void divisionOperation(Scanner scanner, Calculator calculator) {
+        int[] twoNumbersFromInput = getTwoNumbersFromInput(scanner);
+        if (twoNumbersFromInput[1] == 0) {
+            System.out.println("Nie można dzielić przez 0.");
+        } else {
+            int result = calculator.division(twoNumbersFromInput[0], twoNumbersFromInput[1]);
+            System.out.println(twoNumbersFromInput[0] + " / " + twoNumbersFromInput[1] + " = " + result);
+        }
     }
 
     private static void moduloOperation(Scanner scanner, Calculator calculator){
