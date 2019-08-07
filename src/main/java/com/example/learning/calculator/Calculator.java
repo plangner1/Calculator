@@ -7,5 +7,6 @@ public interface Calculator {
     int multiplication(int a, int b);
     int division(int a, int b);
     int modulo(int a, int b);
+    int power(int a, int b);
 
 }
