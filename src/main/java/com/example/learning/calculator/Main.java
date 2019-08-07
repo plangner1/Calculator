@@ -31,6 +31,9 @@ public class Main {
                 case 5:
                     moduloOperation(scanner, calculator);
                     break;
+                case 6:
+                    powerOperation(scanner, calculator);
+                    break;
                     default:
                         exit=true;
             }
@@ -66,6 +69,12 @@ public class Main {
         int [] twoNumbersFromInput =getTwoNumbersFromInput(scanner);
         int result = calculator.multiplication(twoNumbersFromInput[0], twoNumbersFromInput[1]);
         System.out.println(twoNumbersFromInput[0] + " * " + twoNumbersFromInput[1] + " = " + result);
+    }
+
+    private static void powerOperation(Scanner scanner, Calculator calculator){
+        int [] twoNumbersFromInput =getTwoNumbersFromInput(scanner);
+        int result = calculator.power(twoNumbersFromInput[0], twoNumbersFromInput[1]);
+        System.out.println(twoNumbersFromInput[0] + " ^2 " + twoNumbersFromInput[1] + " ^2 " + " = " + result);
     }
 
     private static void divisionOperation(Scanner scanner, Calculator calculator) {

@@ -23,5 +23,9 @@ public class CalculatorImpl implements Calculator {
         return a%b;
     }
 
+    public int power(int a, int b) {
+        return a*a*b*b;
+    }
+
 
 }
