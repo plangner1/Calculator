@@ -18,4 +18,10 @@ public class CalculatorImpl implements Calculator {
     public int division(int a, int b) {
         return a/b;
     }
+
+    public int modulo(int a, int b) {
+        return a%b;
+    }
+
+
 }
